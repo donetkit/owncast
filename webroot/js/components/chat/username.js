@@ -101,9 +101,6 @@ export default class UsernameForm extends Component {
     const moderatorFlag = html`
       <img src="/img/moderator-nobackground.svg" class="moderator-flag" />
     `;
-    const userIcon = html`
-      <img src="/img/user-icon.svg" class="user-icon-flag" />
-    `;
 
     return html`
       <div id="user-info" class="whitespace-nowrap">
@@ -118,7 +115,7 @@ export default class UsernameForm extends Component {
             id="username-display"
             class="text-indigo-100 text-xs font-semibold truncate overflow-hidden whitespace-no-wrap ${isModerator &&
             'moderator-flag'}"
-            >${isModerator ? moderatorFlag : userIcon}${username}</span
+            >${isModerator ? moderatorFlag : null}${username}</span
           >
         </div>
 
